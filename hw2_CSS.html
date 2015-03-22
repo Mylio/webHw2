@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hw2</title>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<!--
+<link rel="stylesheet" href="src/animate.css">
+-->
+<style type="text/css">
+body {
+	width:70%;
+	margin: 0 auto;
+	background: url("src/skulls.png");/* Background pattern from subtlepatterns.com */
+}
+header {
+	font-family: 'Slabo 27px', serif;
+	background: url("src/starDustMod.png");/*background-color: #336E7B;*/
+	font-size: 50px;
+	color: #ffffff;
+	padding: 50px 20px 30px;
+	border-bottom: 8px solid #22313F;
+}
+nav {
+	height:52px;/*required, or content will collapse with nav*/
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes navAni {
+    from {height: 5px;}
+    to { height: 39px;}
+}
+/* Standard syntax */
+@keyframes navAni {
+    from {height: 5px;}
+    to { height: 5px;}
+}
+nav ul{ /*animate writes in ul, or padding affect fluence*/
+	background-color: #ffffff;
+	margin-top: 4px;
+	-webkit-animation-name: navAni; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: navAni;
+    animation-duration: 1s;
+}
+nav li {
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+}
+nav div{
+	background-color: #52B3D9;
+	padding: 10px;
+	-webkit-transition-property:opacity;
+	transition-property:opacity;
+	-webkit-transition-duration:0.5s;
+	transition-duration:0.5s;
+	opacity: 0.7;
+}
+nav div:hover{
+	opacity: 1;
+}
+.content{
+	background-color: #E4F1FE;
+	margin-top: -10px;
+	padding: 5px;
+	opacity: .7;
+}
+footer{/*mod*/
+	background-color: #336E7B;
+	color:#ffffff;
+	text-align: center;
+}
+footer:hover{
+	margin-bottom: 0px;/*mod*/
+}
+</style>
+</head>
+
+<body>
+<header>103-2 webProgramming</header>
+<nav>
+ <ul>
+  <li><div>Profile</div></li>
+  <li><div>Timeline</div></li>
+  <li><div>MyFavorites</div></li>
+ </ul>
+</nav>
+<div class="content">
+<!--new-->
+<table id="tabl" style="width:100%">
+  <tr height="10px"></tr>
+  <tr >
+    <td >學年/學期 Academic Year/Semester </td>
+    <td colspan="3">103 學年 第 2 學期</td> 
+     </tr>
+  <tr>
+ <td  rowspan="2">課程名稱 Course Name781007-001</td>
+    <td colspan="3">(中 Ch.)Ｗeb程式設計</td> 
+
+     </tr>
+<tr>
+<td colspan="3" style="background-color:#d6e9f9;font-weight: normal;">(英 Eng.)Web Programming </td>
+</tr>
+<tr>
+<td>授課教師 Instructor </td>
+<td colspan="3">余能豪</td>
+</tr>
+<tr>
+<td width="50%">修別 Type of Credit </td>
+<td>群修</td>
+<td>學分數No. of Credits </td>
+<td>3.0</td>
+</tr>
+</table>
+<!--/new-->
+<section>
+<!--use colume?-->
+</section>
+
+</div>
+<footer>Copyright &copy; 2015 Mylio</footer>
+</body>
+</html>
