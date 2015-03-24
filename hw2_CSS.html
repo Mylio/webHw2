@@ -37,6 +37,7 @@ nav {
 nav ul{ /*animate writes in ul, or padding affect will fluence*/
 	background-color: #ffffff;
 	margin-top: 4px;
+
 	-webkit-animation-name: navAni; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-name: navAni;
@@ -95,13 +96,30 @@ table, th, td {
 	 border-collapse: collapse;
 	 border: 1px solid black;
 	 -webkit-animation-name: fadeLeft; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: fadeLeft;
-    animation-duration: 2s;
+     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+     animation-name: fadeLeft;
+     animation-duration: 2s;
 }
 #tabl td:nth-child(odd) {
 	background: #b9d9f4;
 	font-weight: bold; 
+}
+#tabl2 tr:nth-child(odd) {
+    background: #b9d9f4;
+    font-weight: bold; 
+}
+#tabl3 tr:hover{
+	background: white;
+	color: #7eb9eb;
+}
+#tabl3 td {
+	padding: 10px;
+}
+
+#main {
+	width:75%;
+	margin: 0 auto;
+	
 }/*/table*/
 footer{/*mod*/
 	background-color: #336E7B;
@@ -118,23 +136,26 @@ footer:hover{
 <script>
 $(window).scroll(function() {
    if($(window).scrollTop()> $("header").height()+96) {/*header padding 50*2-nav paddind 4*/
-       $("ul").addClass('fixed');/*.css({xx:x,xx:x})multiple changes, add {} or .addClass('fixed');*/
-   }else{$("ul").removeClass('fixed');}
+       $(navbar).addClass('fixed');/*.css({xx:x,xx:x})multiple changes, add {} or .addClass('fixed');*/
+   }else{$(navbar).removeClass('fixed');}
 });
 </script>
 <header>103-2 webProgramming</header>
 <nav>
- <ul>
+ <ul id="navbar">
+  <li><div><a href="http://mylio.github.io/webHw1/form.html">FORM</a></div></li>
   <li><div>Profile</div></li>
   <li><div>Timeline</div></li>
   <li><div>MyFavorites</div></li>
+  <li><div style="visibility: hidden;float:right;"></div></li>
  </ul>
 </nav>
 <div class="content">
 <!--new-->
+<div id="main">
 <table id="tabl" style="width:100%">
   <tr height="10px"></tr>
-  <tr >
+  <tr>
     <td >學年/學期 Academic Year/Semester </td>
     <td colspan="3">103 學年 第 2 學期</td> 
      </tr>
@@ -157,6 +178,18 @@ $(window).scroll(function() {
 <td>3.0</td>
 </tr>
 </table>
+<table id="tabl2" style="width:100%"></table>
+<script>
+    var index;
+    var text=" ";
+    var con = ["備註 Note", "限學程同學方得修習。", "課程目標 Course objectives", "本課程旨在介紹WWW的基本運作原理並以其為平台開發應用程式，包含HTML5/CSS3動態網頁製作、網頁物件模型(DOM)、JavaScript程式設計與雲端應用等。","課程大綱 Course Description","本課程涵蓋網路平台之最新技術如HTML5, CSS3, Javascript, JSON, JQuery等，並介紹國內外網站及網路行銷活動範例，培養學生網頁應用程式之開發能力及資訊架構設計能力，最後能設計兼具功能與美感的動態網站。","上課進度 Class Schedule","<ol><li>Course Introduction / Git </li><li>HTML5 </li><li>CSS3 (I) </li><li>CSS3 (II) </li><li>IA - Analysis </li><li>Grid system / bootstrap </li><li> IA presentation </li><li>Responsive design </li><li> Midterm </li><li>Javascript (I) / DOM </li><li>Javascript (II) / JQuery </li><li>Parse / JSON </li><li>校慶運動會 </li><li>Heroku / Node.js </li><li>Websocket </li><li>Guest speaker </li><li>Google Analytics </li><li>Final demo</li></ol>","課程要求/評分標準 Course requirements/Grading standards","課堂作業(35%) 、期中作業(20%)及期末實作成品成果展示(30%)","參考書目 Textbook & references（為維護智慧財產權，請務必使用正版書籍）","<ul><li>Eric Freeman, Elisabeth Robson(2011), Head First HTML5 Programming: Building Web Apps with JavaScript, O'Reilly </li><li>Crockford Douglas, JavaScript: The Good Parts, O'Reilly</li></ul>","本課程附件 Course attachments","N/A"];
+    for (index = 0; index < con.length; index++) {
+        text += "<tr><td colspan='3'>" + con[index] + "</td></tr>";
+    }
+    document.getElementById("tabl2").innerHTML = text;
+
+</script>
+</div><!--/main-->
 <!--/new-->
 <section>
 <!--use colume?-->
