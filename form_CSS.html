@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hw1</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+	width:100%;
+	margin: 0 auto;
+	font-family: 'Roboto Condensed', sans-serif;
+	/*background: url("src/skulls.png");*/
+}
+body{/*from http://www.css3factory.com/linear-gradients/*/
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #39EDE4),
+	color-stop(1, #FFC847)
+);
+background-image: -o-linear-gradient(bottom, #39EDE4 0%, #FFC847 100%);
+background-image: -moz-linear-gradient(bottom, #39EDE4 0%, #FFC847 100%);
+background-image: -webkit-linear-gradient(bottom, #39EDE4 0%, #FFC847 100%);
+background-image: -ms-linear-gradient(bottom, #39EDE4 0%, #FFC847 100%);
+background-image: linear-gradient(to bottom, #39EDE4 0%, #FFC847 100%);
+}
+div {
+	padding-top:25px;
+}
+fieldset{
+	width:50%;
+	margin:0 auto;
+}
+/*http://codeitdown.com/ordered-list-css-styles/*/
+ol.simple-list {
+	list-style-type: none;
+	list-style-type: decimal !ie; /*IE 7- hack*/
+	
+	margin: 0;
+	margin-left: 3em;
+	padding: 0;
+	
+	counter-reset: li-counter;
+}
+ol.simple-list > li{
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 0.5em;
+	min-height: 3em;
+	border-left: 2px solid #CCCCCC;
+}
+ol.simple-list > li:before {
+	position: absolute;
+	top: 0;
+	left: -1em;
+	width: 0.8em;
+	
+	font-size: 3em;
+	line-height: 1;
+	font-weight: bold;
+	text-align: right;
+	color: #464646;
+
+	content: counter(li-counter);
+	counter-increment: li-counter;
+}
+.btn {
+	margin-left: 200px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce78), color-stop(1, #fb9e25) );
+	background:-moz-linear-gradient( center top, #ffce78 5%, #fb9e25 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce78', endColorstr='#fb9e25');
+	background-color:#ffce78;
+	-webkit-border-top-left-radius:19px;
+	-moz-border-radius-topleft:19px;
+	border-top-left-radius:19px;
+	-webkit-border-top-right-radius:19px;
+	-moz-border-radius-topright:19px;
+	border-top-right-radius:19px;
+	-webkit-border-bottom-right-radius:19px;
+	-moz-border-radius-bottomright:19px;
+	border-bottom-right-radius:19px;
+	-webkit-border-bottom-left-radius:19px;
+	-moz-border-radius-bottomleft:19px;
+	border-bottom-left-radius:19px;
+	text-indent:0;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Comic Sans MS;
+	font-size:21px;
+	font-weight:bold;
+	font-style:normal;
+	height:45px;
+	line-height:45px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #cc9f52;
+}
+.btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffce78) );
+	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffce78 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffce78');
+	background-color:#fb9e25;
+}.btn:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+legend{
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+  <div>
+  	<fieldset>
+<form id="intro">
+	<legend>-SELF INTRODUCTION-</legend>
+	<ol class="simple-list">
+	<li><label>Your Name ?<br><input type="text" required></label></li>
+	<li><label>What's your Gender ?<br><input type="radio" name="gender" value="male" id="male"><label for="male">Male</label><input type="radio" name="gender" value="female" id="female"><label for="female">Female</label></label></li>
+	<li><label>Birthday ?<br><input type="date" required></label></li>
+	<li><label>Which form of Transportation do you use ? (choose as many as you like)<br>
+		<input type="checkbox" name="vehicle" value="Bike" id="bike"><label for="bike">Bike</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="bus"><label for="bus">Bus</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="walking"><label for="walking">Walking</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="metro"><label for="metro">Metro</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="car"><label for="car">Car</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="motorcycle"><label for="motorcycle">Motorcycle</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="train"><label for="train">Train</label>
+		<input type="checkbox" name="vehicle" value="Bike" id="airplane"><label for="airplane">Airplane</label>
+		</label></li>
+	<li><label>What is the highest level of education you have completed ?<br>
+		<ol type="A">
+		<li><input type="radio" name="edu" value="a" id="a"><label for="a">Less than High School</label></li>
+		<li><input type="radio" name="edu" value="a" id="b"><label for="b">High School or equivalent</label></li>
+		<li><input type="radio" name="edu" value="a" id="c"><label for="c">Attended College / University</label></li>
+		<li><input type="radio" name="edu" value="a" id="d"><label for="d">Associate degree</label></li>
+		<li><input type="radio" name="edu" value="a" id="e"><label for="e">Bachelor's degree</label></li>
+		<li><input type="radio" name="edu" value="a" id="f"><label for="f">Master's degree</label></li>
+		<li><input type="radio" name="edu" value="a" id="g"><label for="g">Professional degree</label></li>
+		<li><input type="radio" name="edu" value="a" id="h"><label for="h">Doctorate degree</label></li>
+		<li><input type="radio" name="edu" value="a" id="i"><label for="i">I prefer not to answer</label></li>
+		</ol>
+	</label></li>
+	<li><label>Which industry do you work in or are most involved with?<br>
+		<select name="indlist" id="indlist">
+		  <option value="volvo">:))</option>
+		  <option value="saab">O_O</option>
+		  <option value="opel">= =</option>
+		  <option value="audi">/n\</option>
+		</select>
+	</label></li>
+	<li><label>Your Phone#<br><input type="tel" id="phones"></label></li>
+	<li><label>Email address<br><input type="email"></label></li>
+	<li><label>Personal website<br><input type="url"></label></li>
+	<!--<li><label></label></li>-->
+	</ol>
+	</form>
+	
+	<button type="submit" form="intro" class="btn">DONE</button>
+</fieldset>
+</div>
+
+<!--
+https://nccuhour.typeform.com/to/UchSEq
+http://www.html5rocks.com/en/tutorials/forms/html5forms/#toc-vc-pattern
+     
+- 
+
+-->
+</body>
+</html>
